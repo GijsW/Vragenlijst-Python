@@ -30,13 +30,13 @@ time.sleep(2)
 
 #Algemene vragen
 leeftijd = str(input("Wat is je leeftijd? (15 t/m 24): "))
-f.write("Wat is je leeftijd? (15 t/m 24): " + leeftijd + "\n")
+f.write(leeftijd + "\n")
 geslacht = str(input("Wat is je geslacht? (Man/vrouw): "))
-f.write("Wat is je geslacht? (Man/vrouw): " + geslacht + "\n")
+f.write(geslacht + "\n")
 provincie = str(input("In welke provincie woon je?: "))
-f.write("In welke provincie woon je?: " + provincie + "\n")
+f.write(provincie + "\n")
 studie = str(input("Wat studeerde je voor je aan TP begon?: "))
-f.write("Wat studeerde je voor je aan TP begon?: " + studie + "\n")
+f.write(studie + "\n")
 
 print("")
 print("")
@@ -49,12 +49,10 @@ if tijdsdruk == "ja" or tijdsdruk == "Ja":
     print("")
     print("Vragenlijst A")
     time.sleep(1)
-    a1 = str(input("Vind je het fijner om met of zonder tijdsdruk te werken?: "))
-	f.write("" + a1 + "\n")
+    a1 = str(input("Vind je het fijner om met of zonder tijdsdruk te werken?: "))	
     a2 = str(input("Presteer je beter met of zonder tijdsdruk?: "))
-	f.write("" + a2 + "\n")
     a3 = str(input("In welk verband verliepen de samenwerkingen beter, met of zonder tijdsdruk?: "))
-
+	
 elif tijdsdruk == "nee" or tijdsdruk == "Nee":
     print("")
     print("Vragenlijst B")
@@ -68,6 +66,18 @@ else:
     print("U heeft een verkeerd antwoord gegeven, start het programma opnieuw op.")
     time.sleep(5)
     raise SystemExit
+	
+if tijdsdruk == "ja" or tijdsdruk == "Ja":
+	f.write(a1 + "\n")
+	f.write(a2 + "\n")
+	f.write(a3 + "\n")
+	f.close()
+	
+elif tijdsdruk == "nee" or tijdsdruk == "Nee":
+	f.write(b1 + "\n")
+	f.write(b2 + "\n")
+	f.write(b3 + "\n")
+	f.close()
     
 print("")
 print("")
