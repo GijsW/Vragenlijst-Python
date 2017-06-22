@@ -29,6 +29,7 @@ print("")
 time.sleep(2)
 
 #Algemene vragen
+f.write("Algemene vragen" + "\n")
 leeftijd = str(input("Wat is je leeftijd? (15 t/m 24): "))
 f.write(leeftijd + "\n")
 geslacht = str(input("Wat is je geslacht? (Man/vrouw): "))
@@ -68,16 +69,18 @@ else:
     raise SystemExit
 	
 if tijdsdruk == "ja" or tijdsdruk == "Ja":
+	f.write("\n" + "Vragenlijst A" + "\n")
 	f.write(a1 + "\n")
 	f.write(a2 + "\n")
 	f.write(a3 + "\n")
-	f.close()
 	
 elif tijdsdruk == "nee" or tijdsdruk == "Nee":
+	f.write("\n" + "Vragenlijst B" + "\n")
 	f.write(b1 + "\n")
 	f.write(b2 + "\n")
 	f.write(b3 + "\n")
-	f.close()
+	
+
     
 print("")
 print("")
@@ -111,6 +114,22 @@ else:
     print("U heeft een verkeerd antwoord gegeven, start het programma opnieuw op.")
     time.sleep(5)
     raise SystemExit
+	
+if autonomie == "goed" or autonomie == "Goed":
+	f.write("\n" + "Vragenlijst C" + "\n")
+	f.write(c1 + "\n")
+	f.write(c2 + "\n")
+	f.write(c3 + "\n")
+	f.write(c4 + "\n")
+	f.write(c5 + "\n")
+	
+elif autonomie == "slecht" or autonomie == "Slecht":
+	f.write("\n" + "Vragenlijst D" + "\n")
+	f.write(d1 + "\n")
+	f.write(d2 + "\n")
+	f.write(d3 + "\n")
+	f.write(d4 + "\n")
+	f.write(d5 + "\n")
     
 print("")
 print("")
@@ -139,8 +158,20 @@ else:
     print("U heeft een verkeerd antwoord gegeven, start het programma opnieuw op.")
     time.sleep(5)
     raise SystemExit
+	
+if hierarchie == "ja" or hierarchie == "Ja":
+	f.write("\n" + "Vragenlijst E" + "\n")
+	f.write(e1 + "\n")
+	f.write(e2 + "\n")
+	f.write(e3 + "\n")
+	
+elif hierarchie == "nee" or hierarchie == "Nee":
+	f.write("\n" + "Vragenlijst F" + "\n")
+	f.write(f1 + "\n")
+	f.write(f2 + "\n")
 
 opmerkingen = str(input("Heeft u nog vragen en/of opmerkingen?: "))
+f.write("\n" + "Opmerkingen " + "\n" + opmerkingen)
 
 print("")
 print("Hartelijk dank voor het invullen van de vragenlijst.")
